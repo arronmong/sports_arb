@@ -25,7 +25,12 @@ This tool performs **Bookmaker Arbitrage** (also known as "Dutching"). It does n
 2.  **Find Best Odds:** It identifies the highest available "Back" odds for Player A to win and the highest available "Back" odds for Player B to win, even if they are on different betting sites.
 3.  **Calculate Margin:** It calculates the implied probability margin using the formula:
     `Margin = (1 / Player_A_Odds) + (1 / Player_B_Odds)`
-4.  **Identify Opportunity:** If the calculated `Margin` is less than 1, it represents a risk-free arbitrage opportunity. The tool then displays this opportunity, along with the percentage of guaranteed profit.
+4.  **Identify Opportunity:** An arbitrage opportunity happens when different bookmakers have a strong enough disagreement on the odds. The arbitrage condition is met when the sum of the implied probabilities from these best possible odds is less than 100%. The tool then displays this opportunity, along with the percentage of guaranteed profit.
+5.  **Calculate Profit:** The guaranteed profit is simply the difference between 1 and the total margin.
+`Guaranteed Profit % = (1 - Total Margin) * 100`
+In our example:
+`Profit % = (1 - 0.964) * 100 = 3.6%`
+This means if you distribute your money correctly across these two bets, you are guaranteed a 3.6% return on your total stake, no matter who wins the match. The calculator in the tool simply does the final step of showing you how to divide a total stake (e.g., $100) to achieve that guaranteed return.
 
 ## Tech Stack
 
