@@ -7,7 +7,7 @@ A simple yet powerful web tool designed to automatically find arbitrage betting 
 
 ## Disclaimer
 
-This is strictly a technical proof of concept and not financial advice, hence the creator of this tool is not responsible for any financial losses incurred. This tool is not intended to be used in an actual gambling/betting setting and therefore the tool will **not** be available online publicly. Arbitrage opportunities are rare and can disappear quickly. Odds data may have delays or inaccuracies. 
+This is strictly a technical proof of concept and not financial advice, hence the creator of this tool is not responsible for any financial losses incurred. This tool is not intended to be used in an actual gambling/betting setting and therefore the tool will **not** be available publicly online. Arbitrage opportunities are rare and can disappear quickly, odds data is sourced from a free unvetted API which may have delays or inaccuracies. 
 
 
 ## Features
