@@ -85,4 +85,4 @@ This project is configured for easy, free deployment on Vercel.
 
 ## Disclaimer
 
-This tool is intended for educational and informational purposes only. Arbitrage opportunities are rare and can disappear quickly. Odds data may have delays or inaccuracies. Always verify all information on the respective bookmaker's website before placing any bets. The creator of this tool is not responsible for any financial losses incurred. Bet responsibly.
+This is strictly a technical proof of concept/test and not financial advice, hence the creator of this tool is not responsible for any financial losses incurred. Arbitrage opportunities are rare and can disappear quickly. Odds data may have delays or inaccuracies. 
