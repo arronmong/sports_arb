@@ -2,10 +2,6 @@
 
 A simple yet powerful web tool designed to automatically find arbitrage betting opportunities in tennis matches across various Australian bookmakers. This tool uses a serverless back-end to securely handle API requests and a clean, responsive front-end to display the results.
 
-## Live Demo
-
-[Link to your deployed Vercel app will go here]
-
 ## Features
 
 -   **Automated Arbitrage Detection:** Automatically scans and calculates arbitrage opportunities where a guaranteed profit can be made.
