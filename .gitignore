@@ -1,0 +1,6 @@
+# Ignore environment files
+.env
+
+# Ignore node modules folder (if you use npm/yarn)
+node_modules
+.vercel
