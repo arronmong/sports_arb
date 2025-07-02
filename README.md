@@ -5,6 +5,11 @@ A simple yet powerful web tool designed to automatically find arbitrage betting 
 <img src="https://github.com/arronmong/sports_arb/blob/main/Demo%20Screenshot.jpg?raw=true" width="400">
 </div>
 
+## Disclaimer
+
+This is strictly a technical proof of concept/test and not financial advice, hence the creator of this tool is not responsible for any financial losses incurred. This tool is not intended to be used in an actual gambling/betting setting. Arbitrage opportunities are rare and can disappear quickly. Odds data may have delays or inaccuracies. 
+
+
 ## Features
 
 -   **Automated Arbitrage Detection:** Automatically scans and calculates arbitrage opportunities where a guaranteed profit can be made.
@@ -83,6 +88,4 @@ This project is configured for easy, free deployment on Vercel.
 4.  **Deploy:**
     -   Click the "Deploy" button. Vercel will build and host your site, providing you with a public URL.
 
-## Disclaimer
 
-This is strictly a technical proof of concept/test and not financial advice, hence the creator of this tool is not responsible for any financial losses incurred. Arbitrage opportunities are rare and can disappear quickly. Odds data may have delays or inaccuracies. 
