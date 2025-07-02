@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSP FIX: Add 'unsafe-inline' to script-src to allow inline JavaScript -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self' *;">
+
     <title>Tennis Arbitrage Finder</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -108,12 +112,15 @@
          * and populates the dropdown select.
          */
         async function handleFetchSports() {
+            console.log('Button clicked - starting fetch...');
             setLoadingState(fetchSportsBtn, fetchSportsText, fetchSportsSpinner, true);
             showMessage('info', 'Fetching Tournaments...', 'Please wait while we get the list of active tennis tournaments.');
 
             try {
                 // Call our own backend, which will securely use the API key.
+                console.log('Making fetch request to:', API_PROXY_URL + '?endpoint=sports');
                 const response = await fetch(`${API_PROXY_URL}?endpoint=sports`);
+                console.log('Response received:', response.status, response.statusText);
                 
                 if (!response.ok) {
                     const errorData = await response.json();
@@ -121,7 +128,9 @@
                 }
 
                 const sports = await response.json();
+                console.log('Sports data received:', sports);
                 const tennisSports = sports.filter(sport => sport.group === 'Tennis' && sport.active);
+                console.log('Tennis sports filtered:', tennisSports.length);
 
                 if (tennisSports.length === 0) {
                     showMessage('info', 'No Active Tournaments', 'No active tennis tournaments were found at the moment. Please try again later.');
@@ -155,13 +164,16 @@
             const sportKey = tournamentSelect.value;
             if (!sportKey) return;
 
+            console.log('Finding arbitrage for sport:', sportKey);
             setLoadingState(findOddsBtn, findOddsText, findOddsSpinner, true);
             showMessage('info', 'Analyzing Odds...', 'Fetching match odds and searching for arbitrage opportunities. This may take a moment.');
 
             try {
                 // Call our backend proxy with the selected sport key.
                 const url = `${API_PROXY_URL}?endpoint=odds&sport=${sportKey}`;
+                console.log('Making fetch request to:', url);
                 const response = await fetch(url);
+                console.log('Odds response received:', response.status, response.statusText);
 
                 if (!response.ok) {
                     const errorData = await response.json();
@@ -169,7 +181,9 @@
                 }
 
                 const oddsData = await response.json();
+                console.log('Odds data received:', oddsData);
                 const opportunities = findArbitrageOpportunities(oddsData);
+                console.log('Arbitrage opportunities found:', opportunities.length);
 
                 displayResults(opportunities);
 
