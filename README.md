@@ -1,6 +1,9 @@
 # Tennis Arbitrage Finder
 
 A simple yet powerful web tool designed to automatically find arbitrage betting opportunities in tennis matches across various Australian bookmakers. This tool uses a serverless back-end to securely handle API requests and a clean, responsive front-end to display the results.
+<div align="center">
+<img src="https://github.com/arronmong/sports_arb/blob/main/Demo%20Screenshot.jpg?raw=true" width="400">
+</div>
 
 ## Features
 
