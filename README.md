@@ -19,21 +19,21 @@ This is strictly a technical proof of concept and not financial advice, hence th
 
 ## How It Works
 
-This tool performs **Bookmaker Arbitrage** (also known as "Dutching"). It does not use "Lay" bets, which are found on betting exchanges. The strategy is as follows:
+This tool performs **Bookmaker Arbitrage** (also known as "Dutching"). It focuses on finding mispricing on "Back" bets across multiple betting exchanges/bookkeepers in Australia.
 
-1.  **Fetch Odds:** The tool fetches head-to-head (H2H) match odds for two players from multiple bookmakers.
-2.  **Find Best Odds:** It identifies the highest available "Back" odds for Player A to win and the highest available "Back" odds for Player B to win, even if they are on different betting sites.
-3.  **Calculate Margin:** It calculates the implied probability margin using the formula:
+1.  **Fetch Odds:** Fetches odds for an upcoming tennis match for two opposing players from multiple bookmakers.
+2.  **Find Best Odds:** It identifies the highest available "Back" odds for Player A to win and the highest available "Back" odds for Player B to win, between betting sites.
+3.  **Calculate Margin:** It calculates the implied probability margin for player A winning and player B winning using the formula:
     `Margin = (1 / Player_A_Odds) + (1 / Player_B_Odds)`
-4.  **Identify Opportunity:** An arbitrage opportunity happens when different bookmakers have a strong enough disagreement on the odds. The arbitrage condition is met when the sum of the implied probabilities from these best possible odds is less than 100%. The tool then displays this opportunity, along with the percentage of guaranteed profit.
-5.  **Calculate Profit:** The guaranteed profit is simply the difference between 1 and the total margin.
-
-`Guaranteed Profit % = (1 - Total Margin) * 100`
+4.  **Identify Opportunity:** The arbitrage condition is met when the sum of the implied probabilities from the two best possible odds added together is less than 100%. The tool then displays this opportunity, along with the percentage of guaranteed profit.
+5.  **Calculate Profit:** The guaranteed profit is the difference between 1 and the total margin.
+ie.
+`Profit % = (1 - Total Margin) * 100`
 
 For example:
 `Profit % = (1 - 0.964) * 100 = 3.6%`
 
-This means if you distribute your money correctly across these two bets, you are guaranteed a 3.6% return on your total stake, no matter who wins the match. The calculator in the tool simply does the final step of showing you how to divide a total stake (e.g., $100) to achieve that guaranteed return.
+This means if you distribute your money correctly across these two bets (which the tool will calculate), you are guaranteed a 3.6% return on your total stake, no matter who wins the match. 
 
 ## Tech Stack
 
