@@ -38,7 +38,7 @@ This means if you distribute your money correctly across these two bets (which t
 ## Tech Stack
 
 -   **Front-End:** HTML, Tailwind CSS, JavaScript
--   **Back-End:** Node.js Serverless Function
+-   **Back-End:** Node.js
 -   **API:** [The Odds API](https://the-odds-api.com/) for sports betting odds.
 -   **Deployment:** [Vercel](https://vercel.com/)
 
